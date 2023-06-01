@@ -45,7 +45,11 @@ function App() {
 
 	return (
 		<div className="App">
-			{auth === false && (
+			<Routes>
+				{publicRoute.map(route => <Route path={`/${len}${route.path}`} element={route.element} key={route.id} />)}
+				<Route path="*" element={<Navigate to={`/${len}/`} />} />
+			</Routes>
+			{/* {auth === false && (
 				<Routes>
 					{publicRoute.map(route => <Route path={`/${len}${route.path}`} element={route.element} key={route.id} />)}
 					<Route path="*" element={<Navigate to={`/${len}/`} />} />
@@ -90,7 +94,7 @@ function App() {
 						</Routes>
 					)}
 				</div>
-			)}
+			)} */}
 		</div>
 	);
 }

@@ -52,7 +52,11 @@ export const registerRequest = createAsyncThunk("token/register", async payload 
 		headers: {
 			"Content-Type": "application/json-patch+json"
 		}
-	}).then(res => res.data);
+	}).then(res => {
+		console.log(res.data);
+		
+		return res.data;
+	});
 });
 
 /////////////////////////////////////LLOGIN POST///////////////////////
