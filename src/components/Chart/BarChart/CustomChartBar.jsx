@@ -36,6 +36,9 @@ import "./style.scss";
 const CustomChartBar = ({ chartData, width, height, columnBorderRadius, paddingWrapper, columnColor, verticalInterval, isY,rotate }) => {
 	const maxValue = chartData && Math.max(...chartData.map(item => item.series));
 	const generatorY = maxValue => {
+
+
+
 		let valueY = [];
 		const element = [];
 		let i = 1;
