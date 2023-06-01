@@ -55,6 +55,8 @@ const logInSlice = createSlice({
 			state.loading = true;
 		});
 		builder.addCase(registerRequest.fulfilled, (state, {payload}) => {
+			console.log(payload);
+			
 			state.checkEmail = payload.succeded;
 			state.bodyErrors = payload.errors
 		});
